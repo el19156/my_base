@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Deliverable delete</title>
+</head>
+<body>
+
+<form action="/deliverable_delete" method="POST" onsubmit="return confirm('Are you sure?');">
+<h4>Delete deliverable:</h4>
+
+<p>
+	Deliverable:<SELECT name="name">
+	{% for j in deliverable_list %}
+		<OPTION value={{j[2]}}>{{j[0]}} {{j[1]}} {{j[2]}} {{j[3]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+<p>Project ID of deliverable (it is shown on the
+left of the name on the list above):
+<input name="id" type="number" required/></p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

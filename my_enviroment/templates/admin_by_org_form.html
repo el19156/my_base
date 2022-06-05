@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Set admin_by_org</title>
+</head>
+<body>
+
+<form action="/admin_by_org_insert" method="POST">
+<h4>Which organisation administrates the project?</h4>
+
+<p>
+	Project:<SELECT name="project_id">
+	{% for j in project_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p>
+	Organisation:<SELECT name="organisation_id">
+	{% for j in organisation_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

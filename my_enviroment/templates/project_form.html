@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>project form</title>
+</head>
+<body>
+
+<form action="/project_insert" method="POST">
+<h4>Add project:</h4>
+
+<p>title <input name="title" type="text" required/></p>
+<p>information <input name="information" type="text" required/></p>
+<p>start <input name="start" type="date" required/></p>
+<p>end <input name="end" type="date" required/></p>
+<p>budget <input name="budget" type="number" min="100000" max="1000000" required/></p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+</form>
+</body>
+</html>

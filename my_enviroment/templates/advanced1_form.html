@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Query 3.1 form</title>
+</head>
+<body>
+
+<form action="/advanced1" method="POST">
+<h4>Choose conditions:</h4>
+<!-- Dates -->
+<p>Minimum start date: <input name="min_start" type="date"/></p>
+<p>Maximum start date: <input name="max_start" type="date"/></p>
+<p>Minimum end date: <input name="min_end" type="date"/></p>
+<p>Maximum end date: <input name="max_end" type="date"/></p>
+<!-- Duration in days -->
+<p>Minimum duration (days): <input name="min_duration" type="number"/></p>
+<p>Maximum duration (days): <input name="max_duration" type="number"/></p>
+<!-- Executive -->
+<p>
+	Executive:<SELECT name="exec_id">
+	{% for j in executive_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}} {{j[2]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+
+<p>Do you want to set executive as condition?</p>
+<input type="radio" id="yes" name="test_exec" value="1" required>
+  <label for="yes">Yes</label><br>
+  <input type="radio" id="no" name="test_exec" value="0">
+  <label for="no">No</label>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Project update</title>
+</head>
+<body>
+
+<form action="/project_update" method="POST">
+<h4>Update project:</h4>
+
+<p>
+	Update:<SELECT name="id">
+	{% for j in project_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<h5>Add input only to fields you want to update. Other fields must be empty!</h5>
+<p>title <input name="title" type="text" /></p>
+<p>information <input name="information" type="text" /></p>
+<p>start <input name="start" type="date" /></p>
+<p>end <input name="end" type="date" /></p>
+<p>budget <input name="budget" type="number" min="100000" max="1000000" /></p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

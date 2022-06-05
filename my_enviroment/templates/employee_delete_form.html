@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Employee delete</title>
+</head>
+<body>
+
+<form action="/employee_delete" method="POST" onsubmit="return confirm('Are you sure?');">
+<h4>Delete employee:</h4>
+
+<p>
+	Employee:<SELECT name="id">
+	{% for j in employee_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}} {{j[2]}} {{j[3]}} {{j[4]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

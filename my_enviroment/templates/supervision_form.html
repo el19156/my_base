@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Scientific supervision</title>
+</head>
+<body>
+
+<form action="/supervision_insert" method="POST">
+<h4>Who is the scientific supervisor of the project?</h4>
+
+<p>
+	Researcher:<SELECT name="researcher_id">
+	{% for j in researcher_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}} {{j[2]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p>
+	Project:<SELECT name="project_id">
+	{% for j in project_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

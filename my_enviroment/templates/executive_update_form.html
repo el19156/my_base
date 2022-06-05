@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Executive update</title>
+</head>
+<body>
+
+<form action="/executive_update" method="POST">
+<h4>Update executive:</h4>
+
+<p>
+	Executive:<SELECT name="id">
+	{% for j in executive_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}} {{j[2]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<h5>Add input only to fields you want to update. Other fields must be empty!</h5>
+<p>name <input name="name" type="text" /></p>
+<p>surname <input name="surname" type="text" /></p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

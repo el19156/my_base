@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Organisation update</title>
+</head>
+<body>
+
+<form action="/organisation_update" method="POST">
+<h4>Update organisation:</h4>
+
+<p>
+	Organisation:<SELECT name="id">
+	{% for j in organisation_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<h5>Add input only to fields you want to update. Other fields must be empty!</h5>
+<p>name <input name="name" type="text" /></p>
+<p>shortname <input name="short_name" type="text" /></p>
+<p>city <input name="city" type="text" /></p>
+<p>postal_code <input name="postal_code" type="number" /></p>
+<p>street <input name="street" type="text" /></p>
+
+<p>category:</p>
+<input type="radio" id="Πανεπιστήμιο" name="category" value="Πανεπιστήμιο" required>
+  <label for="Πανεπιστήμιο">Πανεπιστήμιο</label><br>
+  <input type="radio" id="Ερευνητικό Κέντρο" name="category" value="Ερευνητικό Κέντρο">
+  <label for="Ερευνητικό Κέντρο">Ερευνητικό Κέντρο</label>
+  <input type="radio" id="Εταιρία" name="category" value="Εταιρία">
+  <label for="Εταιρία">Εταιρία</label>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

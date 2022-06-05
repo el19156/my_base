@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Field update</title>
+</head>
+<body>
+
+<form action="/field_update" method="POST">
+<h4>Update field:</h4>
+
+<p>
+	Field:<SELECT name="name">
+	{% for j in field_list %}
+		<OPTION value={{j[0]}}>{{j[0]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<h5>Add input only to fields you want to update. Other fields must be empty!</h5>
+<p>name <input name="new_name" type="text" /></p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

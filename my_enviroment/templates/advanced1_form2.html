@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Query 3.1 form2</title>
+</head>
+<body>
+
+<form action="/advanced2" method="POST">
+<h4>These projects satisfy the conditions. Choose one:</h4>
+
+<p>
+	Project:<SELECT name="id">
+	{% for j in proj_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}} {{j[2]}} {{j[3]}} {{j[4]}} {{j[5]}} {{j[6]}} {{j[7]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p><input type="submit" value="Submit" /></p>
+<p><button onclick="history.back()">Go Back</button></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

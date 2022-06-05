@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Project delete</title>
+</head>
+<body>
+
+<form action="/project_delete" method="POST" onsubmit="return confirm('Are you sure?');">
+<h4>Delete project:</h4>
+
+<p>
+	Project:<SELECT name="id">
+	{% for j in project_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

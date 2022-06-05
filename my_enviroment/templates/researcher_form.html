@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Researcher form</title>
+</head>
+<body>
+
+<form action="/researcher_insert" method="POST">
+<h4>Add researcher:</h4>
+<p>name <input name="name" type="text" required/></p>
+<p>surname <input name="surname" type="text" required/></p>
+<p>birthdate <input name="birthdate" type="date" required/></p>
+
+<!--<p>gender <input name="gender" type="text" required/></p>-->
+
+<p>Gender:</p>
+<input type="radio" id="M" name="gender" value="Male" required>
+  <label for="M">Male</label><br>
+  <input type="radio" id="F" name="gender" value="Female">
+  <label for="F">Female</label>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Set deliverable</title>
+</head>
+<body>
+
+<form action="/deliverable_insert" method="POST">
+<h4>Does the project have a deliverable?</h4>
+
+<p>
+	Project:<SELECT name="project_id">
+	{% for j in project_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p>name <input name="name" type="text" required/></p>
+<p>deadline <input name="deadline" type="date" required/></p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

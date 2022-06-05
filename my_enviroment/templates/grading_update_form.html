@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Grading update</title>
+</head>
+<body>
+
+<form action="/grading_update" method="POST">
+<h4>Update grading:</h4>
+
+<p>
+	Grading:<SELECT name="id">
+	{% for j in grading_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}} {{j[2]}} {{j[3]}} {{j[4]}} {{j[5]}} {{j[6]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<h5>Add input only to fields you want to update. Other fields must be empty!</h5>
+<p>Grade <input name="grade" type="number" min="0" max="100"/></p>
+<p>Date <input name="date" type="date"/></p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

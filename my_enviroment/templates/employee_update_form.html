@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Employee update</title>
+</head>
+<body>
+
+<form action="/employee_update" method="POST">
+<h4>Update employee:</h4>
+
+<p>
+	Employee:<SELECT name="id">
+	{% for j in employee_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}} {{j[2]}} {{j[3]}} {{j[4]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p>Starting date: <input name="date" type="date" /></p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

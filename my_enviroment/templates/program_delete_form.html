@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Program delete</title>
+</head>
+<body>
+
+<form action="/program_delete" method="POST" onsubmit="return confirm('Are you sure?');">
+<h4>Delete program:</h4>
+
+<p>
+	Program:<SELECT name="id">
+	{% for j in program_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}} {{j[2]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

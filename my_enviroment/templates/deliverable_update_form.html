@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Deliverable update</title>
+</head>
+<body>
+
+<form action="/deliverable_update" method="POST">
+<h4>Delete update:</h4>
+
+<p>
+	Deliverable:<SELECT name="name">
+	{% for j in deliverable_list %}
+		<OPTION value={{j[2]}}>{{j[0]}} {{j[1]}} {{j[2]}} {{j[3]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+<p>Project ID of deliverable (it is shown on the
+left of the name on the list above):
+<input name="id" type="number" required/></p>
+
+<h5>Add input only to fields you want to update. Other fields must be empty!</h5>
+<p>name <input name="new_name" type="text"/></p>
+<p>deadline <input name="deadline" type="date"/></p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

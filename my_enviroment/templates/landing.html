@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Starting page</title>
+</head>
+<body>
+<h2>Welcome to my base!</h2>
+
+<h4>Insert:</h4>
+<p> <!-- insert buttons C -->
+<!--<button onclick="document.location='/templates/researcher_form.html'">Add researcher</button> 
+<button onclick="document.location='/organisation_form.html'">Add organisation</button>-->
+<button><a href="researcher_form">Add researcher</a></button>
+<button><a href="organisation_form">Add organisation</a></button>
+<button><a href="project_form">Add project</a></button>
+<button><a href="program_form">Add program</a></button>
+<button><a href="field_form">Add field</a></button>
+<button><a href="executive_form">Add executive</a></button>
+</p>
+
+<p> <!-- insert buttons (for strange tables) C -->
+<!--<button onclick="document.location='/templates/researcher_form.html'">Add researcher</button> 
+<button onclick="document.location='/organisation_form.html'">Add organisation</button>-->
+<button><a href="employee_form">Add employee</a></button>
+<button title="Add an executive as admin"><a href="admin_by_exec_form">Add admin_by_exec</a></button>
+<button title="Add an organisation as admin"><a href="admin_by_org_form">Add admin_by_org</a></button>
+<button><a href="deliverable_form">Add deliverable</a></button>
+<button title="Assign researcher to a project"><a href="works_on_proj_form">Add works_on_proj</a></button>
+</p>
+<p>
+<button><a href="financing_form">Add financing</a></button>
+<button><a href="organisation_phone_form">Add org phone</a></button>
+<button><a href="grading_form">Add grading</a></button>
+<button><a href="project_field_form">Add project field</a></button>
+<button title="Assign supervisor to a project"><a href="supervision_form">Add supervisor</a></button>
+</p>
+
+<h4>Show:</h4>
+<p> <!-- show buttons R -->
+<button><a href="researcher_show">Show researchers</a></button>
+<button><a href="organisation_show">Show organisations</a></button>
+<button><a href="project_show">Show projects</a></button>
+<button><a href="program_show">Show programs</a></button>
+<button><a href="field_show">Show fields</a></button>
+<button><a href="executive_show">Show executives</a></button>
+</p>
+
+<p> <!-- show buttons (for strange tables) R -->
+<button><a href="employee_show">Show employees</a></button>
+<button><a href="admin_by_exec_show">Show admin_by_exec</a></button>
+<button><a href="admin_by_org_show">Show admin_by_org</a></button>
+<button><a href="deliverable_show">Show deliverables</a></button>
+<button><a href="works_on_proj_show">Show works_on_proj</a></button>
+</p>
+<p>
+<button><a href="financing_show">Show financing</a></button>
+<button><a href="organisation_phone_show">Show org phones</a></button>
+<button><a href="grading_show">Show gradings</a></button>
+<button><a href="project_field_show">Show project fields</a></button>
+<button><a href="supervision_show">Show supervisors</a></button>
+
+<h4>Delete:</h4>
+<p> <!-- delete buttons D -->
+<button><a href="researcher_delete_form">Delete researcher</a></button>
+<button><a href="organisation_delete_form">Delete organisation</a></button>
+<button><a href="project_delete_form">Delete project</a></button>
+<button><a href="program_delete_form">Delete program</a></button>
+<button><a href="field_delete_form">Delete field</a></button>
+<button><a href="executive_delete_form">Delete executive</a></button>
+</p>
+
+<p> <!-- delete buttons (for strange tables) D -->
+<button><a href="employee_delete_form">Delete employee</a></button>
+<button title="Remove an executive from administration"><a href="admin_by_exec_delete_form">Delete admin by exec</a></button>
+<button title="Remove an organisation from administration"><a href="admin_by_org_delete_form">Delete admin by org</a></button>
+<button><a href="deliverable_delete_form">Delete deliverable</a></button>
+<button title="Remove a researcher from a project"><a href="works_on_proj_delete_form">Delete works on proj</a></button>
+</p>
+<p>
+<button><a href="financing_delete_form">Delete financing</a></button>
+<button><a href="organisation_phone_delete_form">Delete org phone</a></button>
+<button><a href="grading_delete_form">Delete grading</a></button>
+<button><a href="project_field_delete_form">Delete project field</a></button>
+<button title="Remove a scientific supervisor from a project"><a href="supervision_delete_form">Delete supervisor</a></button>
+</p>
+
+<h4>Update:</h4>
+<p> <!-- update buttons U -->
+<button><a href="researcher_update_form">Update researcher</a></button>
+<button><a href="organisation_update_form">Update organisation</a></button>
+<button><a href="project_update_form">Update project</a></button>
+<button><a href="program_update_form">Update program</a></button>
+<button><a href="field_update_form">Update field</a></button>
+<button><a href="executive_update_form">Update executive</a></button>
+</p>
+<p>
+<button title="Change the starting date"><a href="employee_update_form">Update employee</a></button>
+<button><a href="deliverable_update_form">Update deliverable</a></button>
+<button title="Change date and grade"><a href="grading_update_form">Update grading</a></button>
+</p>
+
+<h3>Advanced queries:</h3>
+
+<h4>Query 3.1</h4>
+<p>
+See all projects that satisfy user defined conditions.
+The conditions can be date, duration, executive. Then
+one of them can be chosen in order to see the researchers
+that work on it.
+</p>
+<button><a href="advanced1_form">Query 3.1</a></button>
+
+<h4>Query 3.2</h4>
+<p>
+Choose a view. View 1 is predefined, view 2 is the other one.
+</p>
+<button><a href="advanced2_view1">View 1</a></button>
+<button><a href="advanced2_view2">View 2</a></button>
+
+<h4>Query 3.3</h4>
+<p>
+Choose a scientific field. Then, see all related active
+projects and researchers.
+</p>
+<button><a href="advanced3_form">Query 3.3</a></button>
+
+<h4>Query 3.4</h4>
+<p>
+An organisation can be seen by this query if it has
+received n projects (n >= 10) at year x and n projects
+at year x + 1
+</p>
+<button><a href="advanced4">Query 3.4</a></button>
+
+<h4>Query 3.5</h4>
+<p>
+See the scientific field pairs that have appeared on
+most projects
+</p>
+<button><a href="advanced5">Query 3.5</a></button>
+
+<h4>Query 3.6</h4>
+<p>
+See researchers whose age is below fourty sorted
+by the number of active projects that they work for,
+as well as the number itself
+</p>
+<button><a href="advanced6">Query 3.6</a></button>
+
+<h4>Query 3.7</h4>
+<p>
+See exexcutives that have given the highest
+amount of money to a single company, the amount, and
+the company name, sorted by the amount
+</p>
+<button><a href="advanced7">Query 3.7</a></button>
+
+<h4>Query 3.8</h4>
+<p>
+See researchers that work on at least five projects
+without deliverables, as well as that number
+</p>
+<button><a href="advanced8">Query 3.8</a></button>
+
+</body>
+</html>

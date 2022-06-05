@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Remove executive from administration</title>
+</head>
+<body>
+
+<form action="/admin_by_exec_delete" method="POST" onsubmit="return confirm('Are you sure?');">
+<h4>Choose executive and project. The executive will stop administrating it.</h4>
+
+<p>
+	Executive:<SELECT name="id">
+	{% for j in admin_by_exec_list %}
+		<OPTION value={{j[3]}}>{{j[0]}} {{j[1]}} {{j[2]}} {{j[3]}} {{j[4]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

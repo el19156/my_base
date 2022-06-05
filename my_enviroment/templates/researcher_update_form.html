@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Researcher update</title>
+</head>
+<body>
+
+<form action="/researcher_update" method="POST">
+<h4>Update researcher:</h4>
+
+<p>
+	Researcher:<SELECT name="id">
+	{% for j in researcher_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}} {{j[2]}} {{j[3]}} {{j[4]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<h5>Add input only to fields you want to update. Other fields must be empty!</h5>
+<p>name <input name="name" type="text"/></p>
+<p>surname <input name="surname" type="text"/></p>
+<p>birthdate <input name="birthdate" type="date"/></p>
+<p>Gender:</p>
+<input type="radio" id="M" name="gender" value="Male" required>
+  <label for="M">Male</label><br>
+  <input type="radio" id="F" name="gender" value="Female">
+  <label for="F">Female</label>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

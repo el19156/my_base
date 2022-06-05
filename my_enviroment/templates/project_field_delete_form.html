@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Project field delete</title>
+</head>
+<body>
+
+<form action="/project_field_delete" method="POST" onsubmit="return confirm('Are you sure?');">
+<h4>Remove project from a scientific field (choode same option on both lists):</h4>
+
+<p>
+	Project field:<SELECT name="id">
+	{% for j in project_field_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}} {{j[2]}} </OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p>
+	Project field:<SELECT name="name">
+	{% for j in project_field_list %}
+		<OPTION value={{j[2]}}>{{j[0]}} {{j[1]}} {{j[2]}} </OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

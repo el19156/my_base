@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Org phone delete</title>
+</head>
+<body>
+
+<form action="/organisation_phone_delete" method="POST" onsubmit="return confirm('Are you sure?');">
+<h4>Delete phone (choose the same option on both lists):</h4>
+
+<p>
+	Phone:<SELECT name="id">
+	{% for j in organisation_phone_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}} {{j[2]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p>
+	Phone:<SELECT name="number">
+	{% for j in organisation_phone_list %}
+		<OPTION value={{j[2]}}>{{j[0]}} {{j[1]}} {{j[2]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

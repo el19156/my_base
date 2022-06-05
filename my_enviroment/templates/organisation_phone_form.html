@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Set org phone</title>
+</head>
+<body>
+
+<form action="/organisation_phone_insert" method="POST">
+<h4>Set the organisation's phone:</h4>
+
+<p>
+	Organisation:<SELECT name="organisation_id">
+	{% for j in organisation_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p>Phone: <input name="phone_number" type="number" required/></p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

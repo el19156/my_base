@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Set employee</title>
+</head>
+<body>
+
+<form action="/employee_insert" method="POST">
+<h4>For which organisation does the researcher work?</h4>
+
+<p>
+	Researcher:<SELECT name="researcher_id">
+	{% for j in researcher_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}} {{j[2]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p>
+	Organisation:<SELECT name="organisation_id">
+	{% for j in organisation_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p>Starting date: <input name="date" type="date" required/></p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

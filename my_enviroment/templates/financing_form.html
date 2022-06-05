@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Set financing</title>
+</head>
+<body>
+
+<form action="/financing_insert" method="POST">
+<h4>Which program finances the project?</h4>
+
+<p>
+	Project:<SELECT name="project_id">
+	{% for j in project_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}} </OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p>
+	Program:<SELECT name="program_id">
+	{% for j in program_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

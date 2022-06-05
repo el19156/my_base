@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Executive delete</title>
+</head>
+<body>
+
+<form action="/executive_delete" method="POST" onsubmit="return confirm('Are you sure?');">
+<h4>Delete executive:</h4>
+
+<p>
+	Executive:<SELECT name="id">
+	{% for j in executive_list %}
+		<OPTION value={{j[0]}}>{{j[0]}} {{j[1]}} {{j[2]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Field delete</title>
+</head>
+<body>
+
+<form action="/field_delete" method="POST" onsubmit="return confirm('Are you sure?');">
+<h4>Delete field:</h4>
+
+<p>
+	Field:<SELECT name="name">
+	{% for j in field_list %}
+		<OPTION value={{j[0]}}>{{j[0]}}</OPTION>
+	{% endfor %}
+	</SELECT>
+</p>
+
+<p><input type="submit" value="Submit" /></p>
+<button><a href="landing">Back to landing</a></button>
+
+</form>
+</body>
+</html>
